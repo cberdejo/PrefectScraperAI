@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "prefectscraperai"
+version = "0.1.0"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "prefect>=3.4.0",
+    "sqlalchemy>=2.0",
+    "beautifulsoup4>=4.13.4",
+    "cffi>=1.17.1",
+    "dotenv>=0.9.9",
+    "minio>=7.2.15",
+    "psycopg2-binary>=2.9.10",
+    "pydantic>=2.11.4",
+    "pypandoc>=1.15",
+    "reportlab>=4.4.0",
+    "selenium>=4.32.0",
+    "sentence-transformers>=4.1.0",
+    "tqdm>=4.67.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff"
+]
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
