@@ -34,7 +34,76 @@ This project implements a web scraping pipeline orchestrated with **Prefect**. I
 
 
 ## 🗂️ Project Structure
-
+```
+scraping-pipeline
+├─ 📁airflow_scrap
+│  ├─ 📁src
+│  │  └─ 📁dags
+│  │     ├─ 📄main.py
+│  │     └─ 📄__init__.py
+│  ├─ 📄Dockerfile
+│  ├─ 📄pyproject.toml
+│  ├─ 📄README.md
+│  └─ 📄uv.lock
+├─ 📁prefect_scrap
+│  ├─ etc[...]
+│  ├─ 📄Dockerfile
+│  ├─ 📄pyproject.toml
+│  ├─ 📄README.md
+│  └─ 📄uv.lock
+├─ 📁scrap_utils
+│  ├─ 📁src
+│  │  ├─ 📁config
+│  │  ├─ 📁helpers
+│  │  ├─ 📁models
+│  │  └─ 📁tasks
+│  ├─ 📄README.md
+│  └─ 📄uv.lock
+├─ 📄.dockerignore
+├─ 📄.gitignore
+├─ 📄.pre-commit-config.yaml
+├─ 📄docker-compose.airflow.yml
+├─ 📄docker-compose.prefect.yml
+├─ 📄LICENSE
+└─ 📄README.md
+```
+```
+PrefectScraperAI
+├─ 📁src
+│  ├─ 📁config
+│  │  ├─ 📄logger.py
+│  │  ├─ 📄minio.py
+│  │  ├─ 📄postgres.py
+│  │  └─ 📄__init__.py
+│  ├─ 📁helpers
+│  │  ├─ 📄utils.py
+│  │  └─ 📄__init__.py
+│  ├─ 📁models
+│  │  ├─ 📄pydantic_models.py
+│  │  ├─ 📄sqlalchemy_models.py
+│  │  └─ 📄__init__.py
+│  ├─ 📁pipeline
+│  │  ├─ 📄main.py
+│  │  ├─ 📄prefect_pipeline.py
+│  │  └─ 📄__init__.py
+│  └─ 📁tasks
+│     ├─ 📄generate_embedding.py
+│     ├─ 📄load_to_postgres.py
+│     ├─ 📄scrape_pisos.py
+│     ├─ 📄scrape_solvia.py
+│     ├─ 📄upload_report.py
+│     └─ 📄__init__.py
+├─ 📄.dockerignore
+├─ 📄.env-template
+├─ 📄.gitignore
+├─ 📄.python-version
+├─ 📄docker-compose.yml
+├─ 📄Dockerfile
+├─ 📄LICENSE
+├─ 📄pyproject.toml
+├─ 📄README.md
+└─ 📄uv.lock
+```
 ## ⚙️ How to Use
 
 ### 🔁 With Docker
@@ -139,45 +208,4 @@ This transforms your scraped data into a **semantic search engine** for real est
 MIT – free to use, modify and distribute.
 
 
-pip install "apache-airflow==2.6.3" --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.6.3/constraints-3.11.txt"
-python -m airflow standalone
----
-sudo apt update
-sudo apt install -y chromium-browser chromium-chromedriver
 
-
-
-
-```
-scraping-pipeline
-├─ 📁airflow_scrap
-│  ├─ 📁src
-│  │  └─ 📁dags
-│  │     ├─ 📄main.py
-│  │     └─ 📄__init__.py
-│  ├─ 📄Dockerfile
-│  ├─ 📄pyproject.toml
-│  ├─ 📄README.md
-│  └─ 📄uv.lock
-├─ 📁prefect_scrap
-│  ├─ etc[...]
-│  ├─ 📄Dockerfile
-│  ├─ 📄pyproject.toml
-│  ├─ 📄README.md
-│  └─ 📄uv.lock
-├─ 📁scrap_utils
-│  ├─ 📁src
-│  │  ├─ 📁config
-│  │  ├─ 📁helpers
-│  │  ├─ 📁models
-│  │  └─ 📁tasks
-│  ├─ 📄README.md
-│  └─ 📄uv.lock
-├─ 📄.dockerignore
-├─ 📄.gitignore
-├─ 📄.pre-commit-config.yaml
-├─ 📄docker-compose.airflow.yml
-├─ 📄docker-compose.prefect.yml
-├─ 📄LICENSE
-└─ 📄README.md
-```
