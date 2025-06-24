@@ -1,8 +1,8 @@
 FROM python:3.11-slim as base
 
-# Instalar dependencias del sistema necesarias para uv y librerías Python
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    curl ca-certificates build-essential libffi-dev && \
+    curl gcc libffi-dev libssl-dev && \
+    apt-get purge -y && \
     rm -rf /var/lib/apt/lists/*
 
 # Instalar uv

@@ -45,7 +45,7 @@ services:
       - postgres
       - minio
       - prefect-server
-    command: uv run python prefect_scrap/src/pipeline/main.py
+    command: uv run  ./src/pipeline/main.py
     environment:
       PREFECT_API_URL: http://prefect-server:4200/api
       POSTGRES_USER: postgres
