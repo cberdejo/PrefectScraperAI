@@ -34,39 +34,7 @@ This project implements a web scraping pipeline orchestrated with **Prefect**. I
 
 
 ## 🗂️ Project Structure
-```
-scraping-pipeline
-├─ 📁airflow_scrap
-│  ├─ 📁src
-│  │  └─ 📁dags
-│  │     ├─ 📄main.py
-│  │     └─ 📄__init__.py
-│  ├─ 📄Dockerfile
-│  ├─ 📄pyproject.toml
-│  ├─ 📄README.md
-│  └─ 📄uv.lock
-├─ 📁prefect_scrap
-│  ├─ etc[...]
-│  ├─ 📄Dockerfile
-│  ├─ 📄pyproject.toml
-│  ├─ 📄README.md
-│  └─ 📄uv.lock
-├─ 📁scrap_utils
-│  ├─ 📁src
-│  │  ├─ 📁config
-│  │  ├─ 📁helpers
-│  │  ├─ 📁models
-│  │  └─ 📁tasks
-│  ├─ 📄README.md
-│  └─ 📄uv.lock
-├─ 📄.dockerignore
-├─ 📄.gitignore
-├─ 📄.pre-commit-config.yaml
-├─ 📄docker-compose.airflow.yml
-├─ 📄docker-compose.prefect.yml
-├─ 📄LICENSE
-└─ 📄README.md
-```
+
 ```
 PrefectScraperAI
 ├─ 📁src
