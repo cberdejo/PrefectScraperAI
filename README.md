@@ -5,7 +5,6 @@
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-![Apache Airflow](https://img.shields.io/badge/Apache%20Airflow-017CEE?style=for-the-badge&logo=Apache%20Airflow&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
 ![MinIO](https://img.shields.io/badge/MinIO-FF4F00?style=for-the-badge&logo=MinIO&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
@@ -23,7 +22,7 @@ This project implements a web scraping pipeline orchestrated with **Prefect**. I
 ## 🚀 Main Technologies Used
 
 - **Python 3.11**: Main programming language.
-- **Apache Airflow**: Orchestrates and schedules scraping and data-processing tasks.
+- **Prefect**: Orchestrates and schedules scraping and data-processing tasks.
 - **PostgreSQL**: Stores structured data and embeddings.
 - **MinIO**: Object storage compatible with Amazon S3, used for storing reports.
 - **Selenium**: Automates interactions with dynamic websites.
