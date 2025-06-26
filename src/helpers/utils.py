@@ -51,4 +51,3 @@ def extract_price(text: str) -> float | None:
 
     match = re.search(r"\d+(\.\d+)?", clean_text)
     return float(match.group()) if match else None
-

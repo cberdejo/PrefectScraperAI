@@ -1,5 +1,6 @@
 import asyncio
 from pipeline.prefect_pipeline import run_prefect_pipeline
+
 if __name__ == "__main__":
     pisos_urls = [
         "https://www.pisos.com/venta/pisos-torremolinos/",

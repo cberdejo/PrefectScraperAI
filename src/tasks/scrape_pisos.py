@@ -31,7 +31,7 @@ logger = get_logger("scrape_pisos")
 
 
 def init_selenium(options: Optional[Options] = None) -> WebDriver:
-    """ 
+    """
     Initializes the Selenium WebDriver with the provided options.
     Args:
         options (Optional[Options]): Custom options for the WebDriver. If None, uses default headless options.
@@ -149,7 +149,6 @@ def close_poping_modal(driver: WebDriver, timeout: int = 3):
         pass
     except Exception as e:
         logger.error(f"Unexpected error while closing modal: {e}")
-    
 
 
 def scrape_page(driver: WebDriver) -> list[Apartment]:

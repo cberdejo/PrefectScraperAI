@@ -2,9 +2,10 @@ from models.pydantic_models import Apartment
 from models.sqlalchemy_models import Apartment_DB
 from config.logger import get_logger
 from sentence_transformers import SentenceTransformer
-from prefect import  task
+from prefect import task
 
 logger = get_logger("generate_embeddings")
+
 
 @task
 def generate_embeddings(apartments: list[Apartment]) -> list[Apartment_DB]:
@@ -48,7 +49,5 @@ def generate_embeddings(apartments: list[Apartment]) -> list[Apartment_DB]:
         except Exception as e:
             logger.warning(f"Error generating embedding for apartment [{i + 1}]: {e}")
 
-    logger.info(
-        f"Generated {len(results)} embeddings"
-    )
+    logger.info(f"Generated {len(results)} embeddings")
     return results
